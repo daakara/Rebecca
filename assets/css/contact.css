@@ -1,0 +1,148 @@
+/* Styles for Contact Page */
+.contact-main {
+    padding-top: 80px; /* Space for fixed navbar */
+    display: flex;
+    flex-wrap: wrap;
+    background: var(--white);
+    color: var(--text-dark);
+}
+
+.contact-left, .contact-right {
+    flex: 1 1 50%;
+    padding: 4rem;
+}
+
+.contact-left {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.contact-left img {
+    max-width: 450px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-medium);
+}
+
+.contact-right h1, .contact-right h2 {
+    font-family: var(--font-display);
+    color: var(--text-dark);
+}
+
+.contact-right h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 1.5rem;
+}
+
+.contact-right .about-text p {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    max-width: 60ch;
+}
+
+.contact-socials {
+    margin: 2rem 0;
+    display: flex;
+    gap: 1rem;
+}
+
+.contact-socials a {
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    transition: var(--transition-fast);
+}
+
+.contact-socials a:hover {
+    color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+.contact-right h2 {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-form {
+    max-width: 500px;
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    font-size: 1rem;
+    font-family: var(--font-primary);
+    background-color: var(--secondary-color);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submit-btn {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid var(--primary-color);
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.submit-btn:hover {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--white);
+}
+
+@media (max-width: 991px) {
+    .contact-main {
+        flex-direction: column;
+    }
+    .contact-left, .contact-right {
+        flex-basis: auto;
+        padding: 2rem;
+    }
+    .contact-left {
+        order: 2;
+    }
+    .contact-right {
+        order: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-left, .contact-right {
+        padding: 1.5rem;
+    }
+}

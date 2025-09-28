@@ -1,0 +1,118 @@
+/* Styles for About Page */
+.about-main {
+    padding-top: 80px; /* Space for fixed navbar */
+    display: flex;
+    flex-wrap: wrap;
+    background: var(--white);
+    color: var(--text-dark);
+    min-height: 100vh;
+}
+
+.about-left, .about-right {
+    flex: 1 1 50%;
+    padding: 4rem;
+}
+
+.about-left {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.about-left img {
+    max-width: 450px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-medium);
+}
+
+.about-right h1 {
+    font-family: var(--font-display);
+    color: var(--text-dark);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    margin-bottom: 1.5rem;
+}
+
+.about-right p {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    max-width: 65ch;
+    line-height: 1.7;
+}
+
+.accolades, .ambassador-section {
+    margin-top: 3rem;
+}
+
+.accolades h2, .ambassador-section h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.accolades ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.accolades li {
+    color: var(--text-light);
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.accolades li::before {
+    content: '★';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+}
+
+.brand-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+}
+
+.brand-logos img {
+    max-height: 50px;
+    width: auto;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: var(--transition-fast);
+}
+
+.brand-logos img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+@media (max-width: 991px) {
+    .about-main {
+        flex-direction: column;
+    }
+    .about-left, .about-right {
+        flex-basis: auto;
+        padding: 2rem;
+    }
+    .about-left {
+        order: 2;
+    }
+    .about-right {
+        order: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-left, .about-right {
+        padding: 1.5rem;
+    }
+}

@@ -34,7 +34,7 @@ body {
     font-size: 16px;
     line-height: 1.6;
     color: var(--text-dark);
-    background-color: var(--black);
+    background-color: var(--white);
     overflow-x: hidden;
 }
 
@@ -108,6 +108,12 @@ a {
     color: var(--accent-color);
 }
 
+.logo-image {
+    height: 50px;
+    width: auto;
+    display: block; /* Removes extra space below the image */
+}
+
 .nav-menu {
     display: flex;
     align-items: center;
@@ -168,14 +174,6 @@ a {
     display: none;
     flex-direction: column;
     cursor: pointer;
-    gap: 4px;
-}
-
-.nav-toggle span {
-    width: 25px;
-    height: 3px;
-    background: var(--white);
-    transition: var(--transition-fast);
 }
 
 /* Animated Grid */
@@ -282,11 +280,30 @@ a {
 }
 
 /* Image URLs */
-.image-1 { background-image: url('https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80'); }
-.image-2 { background-image: url('https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80'); }
-.image-3 { background-image: url('https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80'); }
-.image-4 { background-image: url('https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=800&q=80'); }
-.image-5 { background-image: url('https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80'); }
-.image-6 { background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80'); }
-.image-7 { background-image: url('https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80'); }
-.image-8 { background-image: url('https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80'); }
+.image-1 { background-image: url('../images/Portrait/Chiomas Headshots/1.jpg'); }
+.image-2 { background-image: url('../images/Beauty/Damilola/1.jpg'); }
+.image-3 { background-image: url('../images/Rebecca Nwose.jpg'); }
+.image-4 { background-image: url('../images/Wedding/Tobi_David/1.jpg'); }
+.image-5 { background-image: url('../images/Family/Mrs_Shola_family/1.jpg'); }
+.image-6 { background-image: url('../images/Maternity/Aisha Maternity Shoot/1.jpg'); }
+.image-7 { background-image: url('../images/Event/Lagos Fashion Week/1.jpg'); }
+.image-8 { background-image: url('../images/Beauty/Debby/1.jpg'); }
+.image-9 { background-image: url('../images/Portrait/Nora_West/1.jpg'); }
+.image-10 { background-image: url('../images/Family/The_Ighodaro's/1.jpg'); }
+.image-11 { background-image: url('../images/Wedding/Tobi_David/5.jpg'); }
+.image-12 { background-image: url('../images/Beauty/Mrs_Layal/1.jpg'); }
+.image-13 { background-image: url('../images/Portrait/Osa/1.jpg'); }
+.image-14 { background-image: url('../images/Maternity/The Bellows/1.jpg'); }
+.image-15 { background-image: url('../images/Event/Corporate Gala/1.jpg'); }
+.image-16 { background-image: url('../images/Beauty/Sandra_Ndigwe/1.jpg'); }
+.image-17 { background-image: url('../images/Portrait/Samuel_Joseph/1.jpg'); }
+.image-18 { background-image: url('../images/Family/Mrs_Shola_family/10.jpg'); }
+.image-19 { background-image: url('../images/Family/The_Ighodaro\'s/3.jpg'); }
+.image-20 { background-image: url('../images/Beauty/Mr_Tosin/3.jpg'); }
+.image-21 { background-image: url('../images/Beauty/Mr_Steve/3.jpg'); }
+.image-22 { background-image: url('../images/Beauty/Sandra_Ndigwe/2.jpg'); }
+.image-23 { background-image: url('../images/Portrait/Tochi_Wigwe/2.jpg'); }
+.image-24 { background-image: url('../images/Family/The_Ighodaro's/4.jpg'); }
+.image-25 { background-image: url('../images/Wedding/Tobi_David/10.jpg'); }
+.image-26 { background-image: url('../images/Maternity/The Bellows/2.jpg'); }
+.image-27 { background-image: url('../images/Event/Corporate Gala/2.jpg'); }
