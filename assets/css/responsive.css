@@ -1,0 +1,21 @@
+@media (max-width: 768px) {
+    .animated-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-auto-rows: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .animated-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 250px;
+    }
+
+    .grid-item--width2 {
+        grid-column: span 1;
+    }
+
+    .grid-item--height2 {
+        grid-row: span 1;
+    }
+}
