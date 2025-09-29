@@ -75,7 +75,7 @@
     align-items: center;
     text-align: center;
     color: var(--white);
-    background: radial-gradient(ellipse at center, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.8) 70%, rgba(0,0,0,0.9) 100%);
+    background: transparent;
     padding: 2rem;
 }
 
@@ -92,4 +92,16 @@
     opacity: 0.9;
     text-shadow: 0 1px 5px rgba(0,0,0,0.5);
     max-width: 600px;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+    .scroll-column.hide-on-mobile {
+        display: none;
+    }
+
+    .scroll-column {
+        flex: 0 0 50%; /* Each of the two visible columns takes up 50% of the width */
+    }
+}
 }

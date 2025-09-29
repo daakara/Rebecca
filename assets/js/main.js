@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const navToggle = document.getElementById('nav-toggle');
     const navMenu = document.getElementById('nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
+    const navbar = document.getElementById('navbar');
 
     if (navToggle) {
         navToggle.addEventListener('click', function() {
@@ -40,6 +41,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 navMenu.classList.remove('active');
                 navToggle.classList.remove('active');
             }
+        }
+    });
+
+    // Add scrolled class to navbar on scroll
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+            if (navbar) {
+                navbar.classList.add('scrolled');
+            }
+        } else {
+            if (navbar) navbar.classList.remove('scrolled');
         }
     });
 });
