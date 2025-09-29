@@ -125,6 +125,16 @@
     color: var(--white);
 }
 
+.submit-btn:disabled {
+    background-color: var(--text-muted);
+    border-color: var(--text-muted);
+    cursor: not-allowed;
+}
+
+.form-success-message {
+    color: var(--text-dark);
+    font-size: 1.2rem;
+}
 @media (max-width: 991px) {
     .contact-main {
         flex-direction: column;

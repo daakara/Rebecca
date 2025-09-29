@@ -12,15 +12,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const showImage = (index) => {
         currentIndex = index;
-        const imgUrl = images[currentIndex];
-        lightbox.innerHTML = `
-            <div class="lightbox-content">
-                <img src="${imgUrl}" alt="">
-                <button class="lightbox-btn lightbox-close">&times;</button>
-                <button class="lightbox-btn lightbox-prev">&lt;</button>
-                <button class="lightbox-btn lightbox-next">&gt;</button>
-            </div>
-        `;
+        const imageUrl = images[currentIndex];
+
+        // Clear previous content
+        lightbox.innerHTML = '';
+
+        // Create elements programmatically to prevent XSS
+        const content = document.createElement('div');
+        content.className = 'lightbox-content';
+
+        const img = document.createElement('img');
+        img.src = imageUrl;
+        // The alt text can be improved if the anchor has a title or data-alt attribute
+        img.alt = 'Lightbox image'; 
+
+        const closeBtn = document.createElement('button');
+        closeBtn.className = 'lightbox-btn lightbox-close';
+        closeBtn.innerHTML = '&times;';
+
+        const prevBtn = document.createElement('button');
+        prevBtn.className = 'lightbox-btn lightbox-prev';
+        prevBtn.innerHTML = '&lt;';
+
+        const nextBtn = document.createElement('button');
+        nextBtn.className = 'lightbox-btn lightbox-next';
+        nextBtn.innerHTML = '&gt;';
+
+        content.appendChild(img);
+        content.appendChild(closeBtn);
+        content.appendChild(prevBtn);
+        content.appendChild(nextBtn);
+        lightbox.appendChild(content);
+
         lightbox.classList.add('active');
     };
 
