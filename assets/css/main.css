@@ -128,15 +128,18 @@ a {
 .nav-link {
     position: relative;
     color: var(--white);
-    font-weight: 500;
+    font-weight: 800;
     transition: var(--transition-fast);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 0.8rem;
 }
 
 .nav-link:hover {
     color: var(--accent-color);
 }
 
-.nav-link::after {
+.nav-link::before {
     content: '';
     position: absolute;
     bottom: -5px;
@@ -144,10 +147,10 @@ a {
     width: 0;
     height: 2px;
     background: var(--accent-color);
-    transition: width 0.3s ease;
+    transition: width 0.3s ease-in-out;
 }
 
-.nav-link:hover::after {
+.nav-link:hover::before {
     width: 100%;
 }
 

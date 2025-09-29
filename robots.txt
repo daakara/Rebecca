@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /rename-files.js
+
+Sitemap: https://www.rebeccanwose.com/sitemap.xml
