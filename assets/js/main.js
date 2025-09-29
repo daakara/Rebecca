@@ -7,8 +7,10 @@ document.addEventListener('DOMContentLoaded', function() {
     if (navToggle) {
         navToggle.addEventListener('click', function() {
             if (navMenu) {
-                navMenu.classList.toggle('active');
+                const isActive = navMenu.classList.toggle('active');
+                navToggle.setAttribute('aria-expanded', isActive);
             }
+            // The active class on the toggle itself is for styling the hamburger icon (e.g., into an 'X')
             navToggle.classList.toggle('active');
         });
     }
@@ -17,9 +19,11 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', function() {
             if (navMenu && navMenu.classList.contains('active')) {
                 navMenu.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
             }
             if (navToggle && navToggle.classList.contains('active')) {
                 navToggle.classList.remove('active');
+
             }
         });
     });
@@ -40,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!isClickInsideNav && !isClickOnToggle) {
                 navMenu.classList.remove('active');
                 navToggle.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
             }
         }
     });

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Rebecca Nwose Photography</title>
+    <meta name="description" content="Thank you for contacting Rebecca Nwose. I will get back to you shortly.">
+    <meta name="robots" content="noindex, nofollow"> <!-- Prevents search engines from indexing this page -->
+
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/mobile-nav.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        .thank-you-main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-height: calc(100vh - 160px); /* Full height minus nav and footer */
+            padding: 2rem;
+        }
+        .thank-you-content h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+        .thank-you-content p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+        .home-btn {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border: 2px solid var(--primary-color);
+            transition: var(--transition-fast);
+        }
+        .home-btn:hover {
+            background: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html"><img src="assets/images/rebecca nwose_alt logo 1.png" alt="Rebecca Nwose Logo" class="logo-image"></a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="portfolio.html" class="nav-link">Portfolio</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-controls="nav-menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="thank-you-main">
+        <div class="thank-you-content">
+            <h1>Thank You!</h1>
+            <p>Your message has been sent successfully. I will get back to you as soon as possible.</p>
+            <a href="index.html" class="home-btn">Return to Homepage</a>
+        </div>
+    </main>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
