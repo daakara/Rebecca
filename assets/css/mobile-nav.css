@@ -44,6 +44,10 @@ body.menu-open {
         display: none; /* Hide social links from the desktop nav bar */
     }
 
+    .nav-menu.active .nav-close {
+        display: block; /* Show the close button when menu is active */
+    }
+
     .nav-menu {
         position: fixed;
         top: 0;
