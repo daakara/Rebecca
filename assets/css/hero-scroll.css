@@ -35,9 +35,8 @@
 
 .scroll-image {
     width: 100%;
-    padding-top: 125%; /* Aspect ratio for images */
-    background-size: cover;
-    background-position: center;
+    height: auto; /* Allow images to have their natural height */
+    object-fit: cover; /* Ensure image covers the area without distortion */
     flex-shrink: 0; /* Prevent images from shrinking */
 }
 
@@ -46,13 +45,13 @@
         transform: translateY(0);
     }
     to {
-        transform: translateY(-100%);
+        transform: translateY(-50%);
     }
 }
 
 @keyframes scroll-down {
     from {
-        transform: translateY(-100%);
+        transform: translateY(-50%);
     }
     to {
         transform: translateY(0);
