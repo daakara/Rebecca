@@ -81,8 +81,7 @@ a {
 }
 
 /* On the homepage, make the navbar fully transparent initially */
-.navbar:has(+ .hero-scroll-container) {
-    border-bottom: none;
+.homepage .navbar {
     background: transparent;
 }
 
