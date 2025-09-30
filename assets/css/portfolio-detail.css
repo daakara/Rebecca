@@ -2,7 +2,7 @@
 
 .portfolio-detail-main {
     padding: 120px 2rem 4rem 2rem; /* Top padding for navbar + header */
-    background: var(--white);
+    background: var(--black);
 }
 
 .portfolio-detail-header {
@@ -12,7 +12,7 @@
 
 .portfolio-detail-header h1 {
     font-size: clamp(2.5rem, 5vw, 4rem);
-    color: var(--text-dark);
+    color: var(--white);
 }
 
 .masonry-grid {

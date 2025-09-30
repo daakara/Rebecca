@@ -3,8 +3,8 @@
     padding-top: 80px; /* Space for fixed navbar */
     display: flex;
     flex-wrap: wrap;
-    background: var(--white);
-    color: var(--text-dark);
+    background: var(--black);
+    color: var(--white);
 }
 
 .contact-left, .contact-right {
@@ -29,7 +29,7 @@
 
 .contact-right h1, .contact-right h2 {
     font-family: var(--font-display);
-    color: var(--text-dark);
+    color: var(--white);
 }
 
 .contact-right h1 {
@@ -51,7 +51,7 @@
 
 .contact-socials a {
     font-size: 1.5rem;
-    color: var(--text-dark);
+    color: var(--white);
     transition: var(--transition-fast);
 }
 
@@ -80,7 +80,7 @@
     margin-bottom: 0.5rem;
     font-weight: 500;
     font-size: 0.9rem;
-    color: var(--text-light);
+    color: var(--white);
 }
 
 .form-group input,

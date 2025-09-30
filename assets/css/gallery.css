@@ -1,10 +1,22 @@
 /* Portfolio Grid Styles */
+.portfolio-page-header {
+    padding-top: 120px; /* Space for navbar */
+    text-align: center;
+    background-color: var(--black);
+}
+
+.portfolio-page-header h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: var(--white);
+    margin-bottom: 0;
+}
+
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     padding: 4rem 2rem;
-    margin-top: 80px; /* Space below navbar */
+    background-color: var(--black);
 }
 
 .portfolio-item {

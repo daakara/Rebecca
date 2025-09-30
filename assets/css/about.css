@@ -3,8 +3,8 @@
     padding-top: 80px; /* Space for fixed navbar */
     display: flex;
     flex-wrap: wrap;
-    background: var(--white);
-    color: var(--text-dark);
+    background: var(--black);
+    color: var(--white);
     min-height: 100vh;
 }
 
@@ -30,13 +30,13 @@
 
 .about-right h1 {
     font-family: var(--font-display);
-    color: var(--text-dark);
+    color: var(--white);
     font-size: clamp(2.5rem, 5vw, 3.5rem);
     margin-bottom: 1.5rem;
 }
 
 .about-right p {
-    color: var(--text-light);
+    color: var(--white);
     margin-bottom: 1.5rem;
     max-width: 65ch;
     line-height: 1.7;
