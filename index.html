@@ -38,7 +38,17 @@
             </div>
             <div class="nav-menu" id="nav-menu">
                 <a href="/" class="nav-link">Home</a>
-                <a href="/portfolio" class="nav-link">Portfolio</a>
+                <div class="nav-item--has-dropdown">
+                    <a href="/portfolio" class="nav-link">Portfolio</a>
+                    <div class="portfolio-dropdown">
+                        <a href="/portfolio-beauty" class="dropdown-link">Beauty</a>
+                        <a href="/portfolio-family" class="dropdown-link">Family</a>
+                        <a href="/portfolio-maternity" class="dropdown-link">Maternity</a>
+                        <a href="/portfolio-portrait" class="dropdown-link">Portrait</a>
+                        <a href="/portfolio-wedding" class="dropdown-link">Wedding</a>
+                        <a href="/portfolio-event" class="dropdown-link">Event</a>
+                    </div>
+                </div>
                 <a href="/about" class="nav-link">About</a>
                 <a href="/contact" class="nav-link">Contact</a>
                 <button class="nav-close" id="nav-close" aria-label="Close menu"><i class="fas fa-times"></i></button>
@@ -56,6 +66,12 @@
         </div>
     </nav>
 
+    <!-- Mobile-only Static Hero Image -->
+    <div class="mobile-hero">
+        <picture><source srcset="assets/images/mobile-hero-bg.webp" type="image/webp"><img src="assets/images/mobile-hero-bg.jpg" alt="A stunning beauty portrait by Rebecca Nwose" loading="eager"></picture>
+    </div>
+
+    <!-- Desktop Hero Scroll -->
     <main class="hero-scroll-container">
         <!-- Column 1 -->
         <div class="scroll-column scroll-up">

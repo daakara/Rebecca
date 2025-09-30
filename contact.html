@@ -59,8 +59,10 @@
         </div>
         <div class="contact-right">
             <h1>Contact Rebecca</h1>
-            <form class="contact-form" action="/thank-you" method="POST" novalidate="">
+            <form class="contact-form" action="https://formspree.io/f/meorgnbk" method="POST" novalidate="">
                 <p class="form-note">Required fields are marked with <span aria-hidden="true">*</span></p>
+                <!-- This hidden field tells Formspree where to redirect after submission -->
+                <input type="hidden" name="_next" value="https://www.rebeccanwose.com/thank-you.html">
                 <div class="form-group">
                     <label for="name">Name <span aria-hidden="true">*</span></label>
                     <input type="text" id="name" name="name" required="" placeholder="Your Name" autocomplete="name" aria-required="true">

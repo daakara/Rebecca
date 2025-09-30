@@ -124,6 +124,50 @@ a {
     align-items: center;
 }
 
+.nav-item--has-dropdown {
+    position: relative;
+}
+
+.portfolio-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--black);
+    padding: 1rem;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    box-shadow: var(--shadow-medium);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transform-origin: top center;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 999;
+}
+
+.nav-item--has-dropdown.dropdown-active .portfolio-dropdown {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown-link {
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    transition: var(--transition-fast);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.dropdown-link:hover {
+    background-color: var(--accent-color);
+    color: var(--white);
+}
 .nav-link {
     position: relative;
     color: var(--white);

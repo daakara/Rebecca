@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.nav-link');
     const navbar = document.getElementById('navbar');
     const backToTopButton = document.querySelector('.back-to-top');
+    const portfolioLink = document.querySelector('.nav-item--has-dropdown'); // Target the portfolio link container
 
     if (navToggle) {
         navToggle.addEventListener('click', function() {
@@ -13,6 +14,18 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             // The active class on the toggle itself is for styling the hamburger icon (e.g., into an 'X')
             navToggle.classList.toggle('active');
+        });
+    }
+
+    // Portfolio Dropdown for Desktop
+    if (portfolioLink) {
+        portfolioLink.addEventListener('mouseenter', () => {
+            if (window.innerWidth > 1024) { // Only on desktop
+                portfolioLink.classList.add('dropdown-active');
+            }
+        });
+        portfolioLink.addEventListener('mouseleave', () => {
+            portfolioLink.classList.remove('dropdown-active');
         });
     }
 
