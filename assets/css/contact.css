@@ -65,6 +65,12 @@
     margin-top: 2rem;
     margin-bottom: 1.5rem;
 }
+.form-note {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
 
 .contact-form {
     max-width: 500px;
@@ -101,6 +107,19 @@
     border-color: var(--accent-color);
     box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
 }
+
+.form-group input.is-invalid,
+.form-group textarea.is-invalid {
+    border-color: #d9534f; /* A standard error red */
+}
+
+.error-message {
+    color: #d9534f;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    display: none; /* Hidden by default */
+}
+
 
 .form-group textarea {
     resize: vertical;

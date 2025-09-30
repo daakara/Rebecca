@@ -6,14 +6,14 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.rebeccanwose.com/contact.html">
+    <meta property="og:url" content="https://www.rebeccanwose.com/contact">
     <meta property="og:title" content="Contact Rebecca Nwose | Book a Photoshoot">
     <meta property="og:description" content="Get in touch with Rebecca Nwose for beauty, fashion, and portrait photography inquiries in Lagos and worldwide. Book your session today.">
     <meta property="og:image" content="https://www.rebeccanwose.com/assets/images/social-share.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.rebeccanwose.com/contact.html">
+    <meta property="twitter:url" content="https://www.rebeccanwose.com/contact">
     <meta property="twitter:title" content="Contact Rebecca Nwose | Book a Photoshoot">
     <meta property="twitter:description" content="Get in touch with Rebecca Nwose for beauty, fashion, and portrait photography inquiries in Lagos and worldwide. Book your session today.">
     <meta property="twitter:image" content="https://www.rebeccanwose.com/assets/images/social-share.jpg">
@@ -32,13 +32,13 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <a href="index.html"><picture><source srcset="assets/images/rebecca nwose_alt logo 1.webp" type="image/webp"><img src="assets/images/rebecca nwose_alt logo 1.png" alt="Rebecca Nwose Logo" class="logo-image"></picture></a>
+                <a href="/"><picture><source srcset="assets/images/rebecca nwose_alt logo 1.webp" type="image/webp"><img src="assets/images/rebecca nwose_alt logo 1.png" alt="Rebecca Nwose Logo" class="logo-image"></picture></a>
             </div>
             <div class="nav-menu" id="nav-menu">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="portfolio.html" class="nav-link">Portfolio</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="/" class="nav-link">Home</a>
+                <a href="/portfolio" class="nav-link">Portfolio</a>
+                <a href="/about" class="nav-link">About</a>
+                <a href="/contact" class="nav-link">Contact</a>
                 <button class="nav-close" id="nav-close" aria-label="Close menu"><i class="fas fa-times"></i></button>
             </div>
             <div class="social-links" id="social-links">
@@ -59,22 +59,23 @@
         </div>
         <div class="contact-right">
             <h1>Contact Rebecca</h1>
-            <form class="contact-form" action="thank-you.html" method="POST">
+            <form class="contact-form" action="/thank-you" method="POST" novalidate="">
+                <p class="form-note">Required fields are marked with <span aria-hidden="true">*</span></p>
                 <div class="form-group">
                     <label for="name">Name <span aria-hidden="true">*</span></label>
-                    <input type="text" id="name" name="name" required="" placeholder="Your Name" autocomplete="name">
+                    <input type="text" id="name" name="name" required="" placeholder="Your Name" autocomplete="name" aria-required="true">
                 </div>
                 <div class="form-group">
                     <label for="email">Email <span aria-hidden="true">*</span></label>
-                    <input type="email" id="email" name="email" required="" placeholder="your.email@example.com" autocomplete="email">
+                    <input type="email" id="email" name="email" required="" placeholder="your.email@example.com" autocomplete="email" aria-required="true">
                 </div>
                 <div class="form-group">
                     <label for="subject">Subject <span aria-hidden="true">*</span></label>
-                    <input type="text" id="subject" name="subject" required="" placeholder="What is this about?" autocomplete="off">
+                    <input type="text" id="subject" name="subject" required="" placeholder="What is this about?" autocomplete="off" aria-required="true">
                 </div>
                 <div class="form-group">
                     <label for="message">Message <span aria-hidden="true">*</span></label>
-                    <textarea id="message" name="message" rows="5" required="" placeholder="Your message..."></textarea>
+                    <textarea id="message" name="message" rows="5" required="" placeholder="Your message..." aria-required="true"></textarea>
                 </div>
                 <button type="submit" class="submit-btn">Send Message</button>
             </form>
