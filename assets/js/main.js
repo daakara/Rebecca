@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const navMenu = document.getElementById('nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
     const navbar = document.getElementById('navbar');
+    const backToTopButton = document.querySelector('.back-to-top');
 
     if (navToggle) {
         navToggle.addEventListener('click', function() {
@@ -59,4 +60,20 @@ document.addEventListener('DOMContentLoaded', function() {
             if (navbar) navbar.classList.remove('scrolled');
         }
     });
+
+    // Back to Top Button Logic
+    if (backToTopButton) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) { // Show button after scrolling 300px
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+
+        backToTopButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
 });
