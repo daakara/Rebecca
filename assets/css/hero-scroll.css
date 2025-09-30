@@ -90,6 +90,12 @@
     max-width: 600px;
 }
 
+/* Responsive adjustments for tablet */
+@media (max-width: 1024px) {
+    .scroll-column.hide-on-tablet {
+        display: none;
+    }
+}
 /* Responsive adjustments for mobile */
 @media (max-width: 768px) {
     .scroll-column.hide-on-mobile {
