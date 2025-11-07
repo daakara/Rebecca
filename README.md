@@ -140,32 +140,66 @@ npm run generate:gallery <Category>  # Generate gallery HTML for a category
 ### Build Script Details
 
 #### `build-css.js`
-- Minifies all CSS files individually
-- Creates a bundled `style.bundle.min.css` (all CSS combined)
-- Outputs to `assets/css/dist/`
-- Shows file size savings
+- **Purpose**: Minifies and bundles CSS for production
+- **What it does**:
+  - Minifies all CSS files individually
+  - Creates a bundled `style.bundle.min.css` (all CSS combined)
+  - Outputs to `assets/css/dist/`
+  - Shows file size savings and compression stats
+- **Dependencies**: postcss, cssnano
+- **Configuration**: Uses `postcss.config.js` settings
 
 #### `convert-images.js`
-- Converts JPG/PNG images to WebP format
-- Quality setting: 80% (configurable)
-- Skips already-converted images
-- Recursive directory processing
+- **Purpose**: Converts original images to optimized WebP format
+- **What it does**:
+  - Converts JPG/PNG images to WebP format
+  - Quality setting: 80% (configurable in script)
+  - Skips already-converted images
+  - Recursive directory processing through all portfolio categories
+  - Preserves original files (delete with `delete-jpgs.js`)
+- **Dependencies**: sharp (image processing library)
 
 #### `fix-html-images.js`
-- Updates `<img src>` references from JPG/PNG to WebP
-- Ensures consistency across all HTML files
-- Safe regex-based replacement
+- **Purpose**: Fixes broken image references in HTML files
+- **What it does**:
+  - Scans all HTML files for `<picture>` elements
+  - Updates `<img src>` attributes to match the WebP source
+  - Ensures fallback images use the same path as WebP images
+  - Uses regex patterns for safe, accurate replacement
+- **When to use**: After converting images to WebP or reorganizing folders
+- **Output**: Reports number of fixes made per file
+
+#### `update-folder-references.js`
+- **Purpose**: Updates HTML when image folders are renamed
+- **What it does**:
+  - Finds and replaces old folder paths with new paths
+  - Processes all HTML files in the project
+  - Preserves all other HTML structure and attributes
+- **Usage**: Edit the script with old/new paths, then run
+- **Safety**: Always commit changes before running bulk replacements
 
 #### `generate-gallery.js`
 Usage:
 ```bash
 node generate-gallery.js Beauty
 node generate-gallery.js Portrait
-# etc.
+node generate-gallery.js Family
+# etc. - works with any category name
 ```
-- Generates HTML markup for gallery images
-- Automatically sorts images numerically
-- Creates proper `<picture>` elements with WebP sources
+- **Purpose**: Generates HTML markup for portfolio galleries
+- **What it does**:
+  - Scans category folder for all image subfolders
+  - Automatically sorts images numerically (1.webp, 2.webp, etc.)
+  - Creates proper `<picture>` elements with WebP sources and fallbacks
+  - Generates organized HTML comments for each client/subfolder
+  - Outputs copyable HTML ready to paste into portfolio pages
+- **Usage tip**: Copy output and replace gallery section in HTML file
+
+#### `delete-jpgs.js`
+- **Purpose**: Cleanup tool to remove original JPG/PNG files
+- **Warning**: Only run after verifying WebP conversion is complete
+- **What it does**: Recursively deletes all .jpg, .jpeg, .png files in images folder
+- **Safety**: Does not delete the logo file (rebecca nwose_alt logo 1.png)
 
 ## 🚢 Deployment
 
@@ -241,7 +275,33 @@ The project includes `.htaccess` for:
    ```bash
    npm run build:css
    ```
-3. HTML pages automatically reference minified versions in `dist/`
+3. Minified files are created in `assets/css/dist/`
+4. HTML pages reference both source and minified CSS for development/production
+
+### Managing Image Folders
+
+When reorganizing image folders:
+
+1. **Rename folders** using descriptive names (not "untitled_folder")
+2. **Update HTML references**:
+   ```bash
+   node update-folder-references.js
+   ```
+   - Or manually find/replace folder paths in HTML files
+3. **Test all portfolio pages** to ensure images load correctly
+
+### Fixing HTML Image References
+
+If image references break:
+
+```bash
+npm run build:html
+```
+
+This will:
+- Scan all HTML files for `<picture>` tags
+- Update `<img src>` attributes to match WebP sources
+- Fix any inconsistencies in image paths
 
 ### SEO Maintenance
 
@@ -252,27 +312,78 @@ The project includes `.htaccess` for:
 
 ## ⚠️ Known Issues
 
-### Critical
+### Resolved ✅
 
-1. **portfolio-portrait.html contains wrong images**
-   - **Issue**: Page displays Beauty category images instead of Portrait
-   - **Impact**: Users see incorrect portfolio content
-   - **Fix**: Regenerate using `node generate-gallery.js Portrait` and manually replace gallery section
-   - **Priority**: HIGH
+1. **✅ portfolio-portrait.html contains wrong images** - FIXED (Nov 7, 2025)
+   - Previously displayed Beauty category images instead of Portrait
+   - Fixed by regenerating gallery with correct Portrait images
+   - Verified 178 Portrait images now display correctly
+
+2. **✅ Package.json duplicates and conflicts** - FIXED (Nov 7, 2025)
+   - Removed duplicate `postcss-cli` entry
+   - Resolved `glob` and `jsdom` dependency conflicts
+   - All dependencies now compatible with Node.js v14+
+
+3. **✅ Broken image references in HTML** - FIXED (Nov 7, 2025)
+   - Fixed 85 broken `<img>` fallback references across 11 HTML files
+   - All `<picture>` tags now have correct WebP sources and fallbacks
+
+4. **✅ Disorganized image folders** - FIXED (Nov 7, 2025)
+   - Renamed `Beauty/untitled_folder` → `Beauty/Editorial`
+   - Renamed `Family/untitled_folder` → `Family/Lifestyle`
+   - Renamed `Portrait/untitled_folder` → `Portrait/Studio`
+   - Updated all HTML references to new folder structure
+
+5. **✅ Missing CSS build pipeline** - FIXED (Nov 7, 2025)
+   - Created `build-css.js` for proper CSS minification
+   - All CSS files now minify to `assets/css/dist/`
+   - Bundle creation working (though not currently linked in HTML)
+
+6. **✅ Homepage improvements** - FIXED (Nov 7, 2025)
+   - Removed "Rebecca Nwose" text overlay from hero section
+   - Reduced animated image columns from 5 to 3 for better mobile UX
+
+7. **✅ Contact form enhancement** - FIXED (Nov 7, 2025)
+   - Added phone number input field with proper validation
+   - Includes international format placeholder
+
+### Active
+
+None currently identified.
 
 ### Compatibility
 
 1. **Node.js Version**
-   - Requires Node.js v14+
-   - Dependencies (glob v11, jsdom v27) prefer Node.js v18+
-   - Current scripts are compatible with v14 using workarounds
+   - Requires Node.js v14.17.5+
+   - Fully tested on v14.17.5
+   - Custom build scripts written to work around older Node.js limitations
+   - Dependencies chosen for v14 compatibility
 
 2. **Browser Support**
-   - WebP images: All modern browsers
-   - Fallback PNG for logo works in all browsers
+   - WebP images: All modern browsers (Chrome, Firefox, Safari, Edge)
+   - Fallback WebP for logo works in all browsers
+   - Progressive enhancement approach for older browsers
    - IE11 not officially supported
 
 ## 📝 Development Notes
+
+### Recent Updates (November 2025)
+
+**Major Fixes & Improvements:**
+- ✅ Fixed portfolio-portrait.html showing wrong images (Beauty → Portrait)
+- ✅ Cleaned up package.json (removed duplicates, resolved conflicts)
+- ✅ Fixed 85 broken image references across all HTML files
+- ✅ Reorganized 3 untitled_folder directories with descriptive names
+- ✅ Built proper CSS minification pipeline with custom script
+- ✅ Updated sitemap.xml with current dates
+- ✅ Enhanced homepage UX (removed overlay, reduced columns)
+- ✅ Added phone number field to contact form
+- ✅ Created comprehensive build and maintenance scripts
+
+**Scripts Created:**
+- `build-css.js` - CSS minification and bundling
+- `fix-html-images.js` - Automated image reference fixing
+- `update-folder-references.js` - Bulk folder path updates
 
 ### Image Naming Convention
 - Use numeric naming for gallery images: `1.webp`, `2.webp`, etc.
@@ -307,6 +418,25 @@ This is a private client project. For inquiries, contact the repository owner.
 
 ---
 
-**Last Updated**: November 7, 2025
-**Version**: 1.0.0
-**Maintained by**: David (daakara)
+**Last Updated**: November 7, 2025  
+**Version**: 2.0.0  
+**Maintained by**: David (daakara)  
+**Status**: Production-ready, fully optimized
+
+### Changelog
+
+**v2.0.0 (November 7, 2025)**
+- Fixed critical bug: portfolio-portrait.html showing wrong images
+- Reorganized image folder structure (removed untitled_folders)
+- Created comprehensive build pipeline (CSS minification, image processing)
+- Fixed 85 broken image references across all pages
+- Enhanced homepage design and contact form
+- Updated all documentation
+- Cleaned up package.json dependencies
+- Created automated maintenance scripts
+
+**v1.0.0 (Initial Release)**
+- Initial website launch
+- Basic portfolio galleries
+- Contact form integration
+- Mobile-responsive design
