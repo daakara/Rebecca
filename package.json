@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "description": "Portfolio website for Rebecca Nwose Photography.",
   "scripts": {
+    "build:css": "node build-css.js",
     "build:images": "node convert-images.js",
-    "build:html": "node update-html-to-webp-only.js",
-    "build": "npm run build:images && npm run build:html",
-    "clean": "node delete-jpgs.js",
+    "build:html": "node fix-html-images.js",
+    "build": "npm run build:images && npm run build:css && npm run build:html",
+    "clean:jpg": "node delete-jpgs.js",
     "generate:gallery": "node generate-gallery.js",
+    "dev": "echo 'Development server - add your preferred dev server here'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Rebecca Nwose",
@@ -18,9 +20,6 @@
     "npm-run-all": "^4.1.5",
     "onchange": "^7.1.0",
     "postcss-cli": "^11.0.0"
-    "postcss-cli": "^11.0.0",
-    "glob": "^10.4.1",
-    "jsdom": "^24.1.0"
   },
   "dependencies": {
     "glob": "^11.0.3",

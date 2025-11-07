@@ -39,14 +39,26 @@ async function updateHtmlFile(filePath) {
             }
         });
 
-        // --- Part 2: Update <a> links to point to .webp ---
+        // --- Part 2: Update <img> tags inside <picture> elements to use .webp ---
+        const pictureImages = document.querySelectorAll('picture img');
+        pictureImages.forEach(img => {
+            const src = img.getAttribute('src');
+            if (src && imageExtensions.test(src)) {
+                const webpSrc = src.replace(imageExtensions, '.webp');
+                img.setAttribute('src', webpSrc);
+                console.log(`  - Updated <picture><img> src to WebP: ${path.basename(src)} -> ${path.basename(webpSrc)}`);
+                updatesMade = true;
+            }
+        });
+
+        // --- Part 3: Update <a> links to point to .webp ---
         const links = document.querySelectorAll('a');
         links.forEach(link => {
             const href = link.getAttribute('href');
             if (href && imageExtensions.test(href)) {
                 const webpHref = href.replace(imageExtensions, '.webp');
                 link.setAttribute('href', webpHref);
-                console.log(`  - Updated <a> href:  -> `);
+                console.log(`  - Updated <a> href: ${path.basename(href)} -> ${path.basename(webpHref)}`);
                 updatesMade = true;
             }
         });
