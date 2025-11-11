@@ -27,14 +27,16 @@ A professional photography portfolio website showcasing the work of Rebecca Nwos
 - **SEO Optimized**: Proper meta tags, sitemap, and semantic HTML
 - **Accessibility**: ARIA labels, keyboard navigation, focus management
 - **Performance**: Minified CSS, optimized images, and efficient loading
+- **CMS Integration**: Decap CMS for easy content management without coding
 
 ## 🛠 Tech Stack
 
 - **Frontend**: Vanilla HTML5, CSS3, JavaScript (ES6)
+- **CMS**: Decap CMS (formerly Netlify CMS)
 - **Image Processing**: Sharp (Node.js)
 - **CSS Processing**: PostCSS, cssnano
 - **Form Handling**: Formspree
-- **Server**: Apache (with .htaccess URL rewriting)
+- **Server**: Apache (with .htaccess URL rewriting) / Netlify
 - **Image Format**: WebP with fallbacks
 - **Build Tools**: Custom Node.js scripts
 
@@ -42,6 +44,9 @@ A professional photography portfolio website showcasing the work of Rebecca Nwos
 
 ```
 Rebecca/
+├── admin/                      # Decap CMS admin panel
+│   ├── index.html              # CMS interface
+│   └── config.yml              # CMS configuration
 ├── assets/
 │   ├── css/                    # Stylesheets
 │   │   ├── dist/               # Minified CSS (generated)

@@ -1,0 +1,126 @@
+backend:
+  name: git-gateway
+  branch: main # Branch to update (optional; defaults to main)
+
+# Uncomment below to enable drafts
+# publish_mode: editorial_workflow
+
+media_folder: "assets/images" # Media files will be stored in the repo under assets/images
+public_folder: "/assets/images" # The src attribute for uploaded media will begin with /assets/images
+
+collections:
+  # About Page Content
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "About Page"
+        name: "about"
+        file: "about.html"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string", default: "About Rebecca" }
+          - { label: "Introduction", name: "intro", widget: "text" }
+          - { label: "Story Paragraph 1", name: "story1", widget: "text" }
+          - { label: "Story Paragraph 2", name: "story2", widget: "text" }
+          - { label: "Story Paragraph 3", name: "story3", widget: "text" }
+          - { label: "Call to Action", name: "cta", widget: "text" }
+          - { label: "About Image", name: "image", widget: "image" }
+
+  # Portfolio Categories
+  - name: "beauty"
+    label: "Beauty Portfolio"
+    folder: "assets/images/Beauty"
+    create: true
+    slug: "{{slug}}"
+    media_folder: "{{slug}}"
+    public_folder: "/assets/images/Beauty/{{slug}}"
+    fields:
+      - { label: "Client Name", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - label: "Images"
+        name: "images"
+        widget: "list"
+        fields:
+          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Alt Text", name: "alt", widget: "string" }
+
+  - name: "portrait"
+    label: "Portrait Portfolio"
+    folder: "assets/images/Portrait"
+    create: true
+    slug: "{{slug}}"
+    media_folder: "{{slug}}"
+    public_folder: "/assets/images/Portrait/{{slug}}"
+    fields:
+      - { label: "Client Name", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - label: "Images"
+        name: "images"
+        widget: "list"
+        fields:
+          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Alt Text", name: "alt", widget: "string" }
+
+  - name: "family"
+    label: "Family Portfolio"
+    folder: "assets/images/Family"
+    create: true
+    slug: "{{slug}}"
+    media_folder: "{{slug}}"
+    public_folder: "/assets/images/Family/{{slug}}"
+    fields:
+      - { label: "Client Name", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - label: "Images"
+        name: "images"
+        widget: "list"
+        fields:
+          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Alt Text", name: "alt", widget: "string" }
+
+  - name: "wedding"
+    label: "Wedding Portfolio"
+    folder: "assets/images/Wedding"
+    create: true
+    slug: "{{slug}}"
+    media_folder: "{{slug}}"
+    public_folder: "/assets/images/Wedding/{{slug}}"
+    fields:
+      - { label: "Client Name", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - label: "Images"
+        name: "images"
+        widget: "list"
+        fields:
+          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Alt Text", name: "alt", widget: "string" }
+
+  - name: "maternity"
+    label: "Maternity Portfolio"
+    folder: "assets/images/Maternity"
+    create: true
+    slug: "{{slug}}"
+    media_folder: "{{slug}}"
+    public_folder: "/assets/images/Maternity/{{slug}}"
+    fields:
+      - { label: "Client Name", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - label: "Images"
+        name: "images"
+        widget: "list"
+        fields:
+          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Alt Text", name: "alt", widget: "string" }
+
+  # Site Settings
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - label: "Contact Information"
+        name: "contact"
+        file: "contact.html"
+        fields:
+          - { label: "Contact Email", name: "email", widget: "string" }
+          - { label: "Contact Phone", name: "phone", widget: "string" }
+          - { label: "Instagram URL", name: "instagram", widget: "string" }
+          - { label: "LinkedIn URL", name: "linkedin", widget: "string" }
+          - { label: "Twitter URL", name: "twitter", widget: "string" }
