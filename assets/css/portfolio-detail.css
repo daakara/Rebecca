@@ -69,17 +69,8 @@
     border-color: var(--accent-color);
 }
 /* Responsive adjustments for masonry grid */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .masonry-grid {
         column-count: 2;
-    }
-}
-
-@media (max-width: 600px) {
-    .portfolio-detail-main {
-        padding: 100px 1rem 2rem 1rem;
-    }
-    .masonry-grid {
-        column-count: 1;
     }
 }
