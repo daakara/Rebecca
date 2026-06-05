@@ -7,7 +7,7 @@ const fallbackExtensions = ['.jpg', '.jpeg', '.png'];
 
 /**
  * Generates an alt text from a filename.
- * e.g., "Aisha-Maternity-Shoot-1.jpg" -> "Aisha Maternity Shoot 1"
+ * e.g., "maternity-session-001.webp" -> "Maternity Session 001"
  * @param {string} filename - The name of the image file.
  * @returns {string} A descriptive alt text.
  */

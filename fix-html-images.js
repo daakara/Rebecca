@@ -12,7 +12,7 @@ async function updateHtmlFile(filePath) {
         let updatesMade = false;
         const originalHtml = html;
 
-        // Fix 1: Update <picture><img src="...jpg"> to use .webp
+        // Fix 1: Update legacy raster sources inside <picture> tags to use WebP
         const pictureImgPattern = /(<picture>.*?<img\s+src="[^"]+?)\.(jpg|jpeg|png)(".*?<\/picture>)/gi;
         if (pictureImgPattern.test(html)) {
             html = html.replace(pictureImgPattern, '$1.webp$3');
@@ -20,7 +20,7 @@ async function updateHtmlFile(filePath) {
             updatesMade = true;
         }
 
-        // Fix 2: Update <a href="...jpg"> to use .webp (for lightbox links)
+        // Fix 2: Update legacy raster lightbox links to use WebP
         const anchorPattern = /(<a\s+[^>]*href=")([^"]+?)\.(jpg|jpeg|png)(")/gi;
         if (anchorPattern.test(html)) {
             html = html.replace(anchorPattern, '$1$2.webp$4');
