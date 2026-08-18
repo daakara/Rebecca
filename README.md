@@ -1,10 +1,10 @@
-# Rebecca Nwose Photography Portfolio
+﻿# Rebecca Nwose Photography Portfolio
 
 A professional photography portfolio website showcasing the work of Rebecca Nwose, a Lagos-based photographer specializing in Beauty, Fashion, Portrait, Wedding, Family, Maternity, and Event photography.
 
 ## 🌐 Live Site
 
-**[www.rebeccanwose.com](https://www.rebeccanwose.com)**
+**[www.rebeccanwose.com](https://rebeccanwose.com)**
 
 ## 📋 Table of Contents
 
@@ -417,7 +417,7 @@ This is a private client project. For inquiries, contact the repository owner.
 
 ## 🔗 Links
 
-- **Website**: [www.rebeccanwose.com](https://www.rebeccanwose.com)
+- **Website**: [www.rebeccanwose.com](https://rebeccanwose.com)
 - **Instagram**: [@rebeccanwose](https://www.instagram.com/rebeccanwose/)
 - **LinkedIn**: [Rebecca Nwose](https://www.linkedin.com/in/rebecca-nwose-84236585/)
 

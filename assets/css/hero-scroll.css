@@ -16,12 +16,17 @@
     animation-duration: 45s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-    flex-direction: column; /* This is correct, just re-ordering for clarity */
+    flex-direction: column;
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
 }
 
 .scroll-column-inner {
     display: flex;
     flex-direction: column;
+    will-change: transform;
 }
 
 .scroll-column.scroll-up {
@@ -35,9 +40,18 @@
 
 .scroll-image {
     width: 100%;
-    height: auto; /* Allow images to have their natural height */
-    object-fit: cover; /* Ensure image covers the area without distortion */
-    flex-shrink: 0; /* Prevent images from shrinking */
+    height: auto;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    flex-shrink: 0;
+    display: block;
+}
+
+.scroll-column-inner picture {
+    display: block;
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    overflow: hidden;
 }
 
 @keyframes scroll-up {

@@ -1,7 +1,7 @@
 # claude.md — Rebecca Nwose Photography Portfolio
 
 ## Project Overview
-Static HTML/CSS/JS photography portfolio for Rebecca Nwose (Lagos-based photographer). Live at www.rebeccanwose.com. No backend, no database, no server-side code.
+Static HTML/CSS/JS photography portfolio for Rebecca Nwose (Lagos-based photographer). Live at rebeccanwose.com. No backend, no database, no server-side code.
 
 ## Tech Stack
 - **Frontend**: Vanilla HTML5, CSS3, JavaScript ES6

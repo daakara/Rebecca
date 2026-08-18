@@ -1,4 +1,21 @@
-User-agent: *
-Disallow: /rename-files.js
+﻿User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /*.js$
 
-Sitemap: https://www.rebeccanwose.com/sitemap.xml
+# Allow specific essential front-end scripts
+Allow: /assets/js/
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+Sitemap: https://rebeccanwose.com/sitemap.xml

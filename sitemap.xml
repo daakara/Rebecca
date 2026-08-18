@@ -1,57 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://www.rebeccanwose.com/</loc>
-    <lastmod>2026-06-05</lastmod>
+    <loc>https://rebeccanwose.com/</loc>
+    <lastmod>2026-08-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.00</priority>
+    <image:image>
+      <image:loc>https://rebeccanwose.com/assets/images/Welcome/001-welcome-ebs0308.webp</image:loc>
+      <image:title>Rebecca Nwose Photography Lagos</image:title>
+      <image:caption>Editorial portrait photography in Lagos, Nigeria by Rebecca Nwose</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://www.rebeccanwose.com/portfolio</loc>
-    <lastmod>2026-06-05</lastmod>
+    <loc>https://rebeccanwose.com/portfolio</loc>
+    <lastmod>2026-08-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://rebeccanwose.com/assets/images/Beauty/001-beauty-a4a7015.webp</image:loc>
+      <image:title>Photography Portfolio - Rebecca Nwose</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://www.rebeccanwose.com/about</loc>
-    <lastmod>2026-06-05</lastmod>
+    <loc>https://rebeccanwose.com/portfolio-portrait</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://rebeccanwose.com/assets/images/Portrait/001-portrait-ebs0030.webp</image:loc>
+      <image:title>Portrait Photography Lagos - Rebecca Nwose</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://rebeccanwose.com/portfolio-beauty</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://rebeccanwose.com/assets/images/Beauty/001-beauty-a4a7015.webp</image:loc>
+      <image:title>Beauty &amp; Fashion Photography Lagos - Rebecca Nwose</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://rebeccanwose.com/portfolio-maternity</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://rebeccanwose.com/assets/images/Maternity/001-maternity-ebs0330.webp</image:loc>
+      <image:title>Maternity Photography Lagos - Rebecca Nwose</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://rebeccanwose.com/portfolio-family</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://rebeccanwose.com/assets/images/Family/001-family-ebs0046.webp</image:loc>
+      <image:title>Family Photography Lagos - Rebecca Nwose</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://rebeccanwose.com/portfolio-couple-portraits</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://rebeccanwose.com/assets/images/Couple_Portraits/001-couple-portraits-ebs0238-2.webp</image:loc>
+      <image:title>Couple Portrait Photography Lagos - Rebecca Nwose</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://rebeccanwose.com/about</loc>
+    <lastmod>2026-08-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://rebeccanwose.com/assets/images/Rebecca%20Nwose.jpeg</image:loc>
+      <image:title>About Rebecca Nwose</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://www.rebeccanwose.com/contact</loc>
-    <lastmod>2026-06-05</lastmod>
+    <loc>https://rebeccanwose.com/contact</loc>
+    <lastmod>2026-08-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://www.rebeccanwose.com/portfolio-beauty</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://www.rebeccanwose.com/portfolio-family</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://www.rebeccanwose.com/portfolio-maternity</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://www.rebeccanwose.com/portfolio-portrait</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://www.rebeccanwose.com/portfolio-couple-portraits</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.70</priority>
+    <image:image>
+      <image:loc>https://rebeccanwose.com/assets/images/Rebecca%20Nwose.jpeg</image:loc>
+      <image:title>Contact Rebecca Nwose</image:title>
+    </image:image>
   </url>
 </urlset>
